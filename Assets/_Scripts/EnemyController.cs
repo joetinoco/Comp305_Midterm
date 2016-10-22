@@ -1,6 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+
+EnemyController
+---------------
+
+by Joseph Tinoco - 300819835
+Last modified - Oct 22, 2016
+
+Controls enemy movement and repositioning on collision.
+
+*/
+
 [System.Serializable]
 public class Speed {
 	public float minSpeed, maxSpeed;

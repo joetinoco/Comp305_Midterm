@@ -1,6 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+
+PlayerController
+---------------
+
+by Joseph Tinoco - 300819835
+Last modified - Oct 22, 2016
+
+Controls player movement, user input and triggers game over
+
+*/
+
 public class PlayerController : MonoBehaviour {
 	// PUBLIC INSTANCE VARIABLES +++++++++++++++++++++++++++++++++++++++
 	//public float speed;
@@ -28,6 +40,7 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
+	// Check for user input
 	private void _CheckInput() {
 		this._newPosition = gameObject.GetComponent<Transform> ().position; // current position
 
@@ -51,6 +64,7 @@ public class PlayerController : MonoBehaviour {
 		gameObject.GetComponent<Transform>().position = this._newPosition;
 	}
 
+	// Boundary check for mouse positions
 	private void _BoundaryCheck() {
 		if (this._newPosition.x < this.boundary.xMin) {
 			this._newPosition.x = this.boundary.xMin;

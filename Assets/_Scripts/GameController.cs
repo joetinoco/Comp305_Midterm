@@ -3,6 +3,18 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/*
+
+GameController
+---------------
+
+by Joseph Tinoco - 300819835
+Last modified - Oct 22, 2016
+
+Handles player lives, scores and game flow
+
+*/
+
 public class GameController : MonoBehaviour {
 	// PUBLIC INSTANCE VARIABLES
 	public int enemyCount;
@@ -60,6 +72,7 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
+	// Handler for the restart button
 	public void RestartButton_Click() {
  		SceneManager.LoadScene ("Main");
  	}

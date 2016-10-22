@@ -27,7 +27,7 @@ public class EnemyController : MonoBehaviour {
 		this.gameController = GameObject
 				.FindGameObjectWithTag("GameController")
 				.GetComponent<GameController>();
-		this._Reset ();
+		this.reset ();
 	}
 	
 	// Update is called once per frame
@@ -38,13 +38,13 @@ public class EnemyController : MonoBehaviour {
 		
 		// Check bottom boundary
 		if (currentPosition.y <= boundary.yMin) {
-			this._Reset();
+			this.reset();
 			gameController.updateScore(+10);
 		}
 	}
 
 	// resets the gameObject
-	private void _Reset() {
+	public void reset() {
 		this._CurrentSpeed = Random.Range (speed.minSpeed, speed.maxSpeed);
 		Vector2 resetPosition = new Vector2 (Random.Range(boundary.xMin, boundary.xMax), boundary.yMax);
 		gameObject.GetComponent<Transform> ().position = resetPosition;

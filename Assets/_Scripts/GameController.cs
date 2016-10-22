@@ -28,6 +28,12 @@ public class GameController : MonoBehaviour {
 		Debug.Log("Score: " + this._score);
 	}
 
+	// Allow update of hull points by other objects
+	public void updateHullPoints(int delta){ 
+		this._hullPoints += delta;
+		Debug.Log("Hull points: " + this._hullPoints);
+	}
+
 	// generate Clouds
 	private void _GenerateEnemies() {
 		for (int count=0; count < this.enemyCount; count++) {

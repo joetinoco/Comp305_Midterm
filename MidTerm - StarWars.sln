@@ -1,6 +1,5 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{4D497F1B-8AB4-5251-D71F-47A5E24F9F32}") = "MidTerm - StarWars", "Assembly-CSharp.csproj", "{D09920A9-93AB-62F1-30EB-AD5BBEE1504F}"
 EndProject
 Project("{4D497F1B-8AB4-5251-D71F-47A5E24F9F32}") = "MidTerm - StarWars", "Assembly-CSharp-Editor-firstpass.csproj", "{4C36F6CD-A4BE-37EB-9E05-92B458955582}"
@@ -19,9 +18,6 @@ Global
 		{4C36F6CD-A4BE-37EB-9E05-92B458955582}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C36F6CD-A4BE-37EB-9E05-92B458955582}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C36F6CD-A4BE-37EB-9E05-92B458955582}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj

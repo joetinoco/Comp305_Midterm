@@ -20,9 +20,13 @@ public class EnemyController : MonoBehaviour {
 	// PRIVATE INSTANCE VARIABLES
 	private float _CurrentSpeed;
 	private float _CurrentDrift;
+	private GameController gameController;
 
 	// Use this for initialization
 	void Start () {
+		this.gameController = GameObject
+				.FindGameObjectWithTag("GameController")
+				.GetComponent<GameController>();
 		this._Reset ();
 	}
 	
@@ -35,6 +39,7 @@ public class EnemyController : MonoBehaviour {
 		// Check bottom boundary
 		if (currentPosition.y <= boundary.yMin) {
 			this._Reset();
+			gameController.updateScore(+10);
 		}
 	}
 

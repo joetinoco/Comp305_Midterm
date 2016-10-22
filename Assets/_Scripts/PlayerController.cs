@@ -7,18 +7,25 @@ public class PlayerController : MonoBehaviour {
 	public Boundary boundary;
 
 	public Camera camera;
+
+	private GameController gameController;
 	
 	// PRIVATE INSTANCE VARIABLES
 	private Vector2 _newPosition = new Vector2(0.0f, 0.0f);
 	
 	// Use this for initialization
 	void Start () {
+		this.gameController = GameObject
+				.FindGameObjectWithTag("GameController")
+				.GetComponent<GameController>();
 
 	}
 
 	// Update is called once per frame
 	void Update () {
-		this._CheckInput ();
+		if (!gameController.gameOver) {
+			this._CheckInput ();
+		}
 	}
 
 	private void _CheckInput() {

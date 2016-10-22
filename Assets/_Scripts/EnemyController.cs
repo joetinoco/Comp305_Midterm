@@ -32,14 +32,16 @@ public class EnemyController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector2 currentPosition = gameObject.GetComponent<Transform> ().position;
-		currentPosition.y -= this._CurrentSpeed;
-		gameObject.GetComponent<Transform> ().position = currentPosition;
-		
-		// Check bottom boundary
-		if (currentPosition.y <= boundary.yMin) {
-			this.reset();
-			gameController.updateScore(+10);
+		if (!gameController.gameOver){
+			Vector2 currentPosition = gameObject.GetComponent<Transform> ().position;
+			currentPosition.y -= this._CurrentSpeed;
+			gameObject.GetComponent<Transform> ().position = currentPosition;
+			
+			// Check bottom boundary
+			if (currentPosition.y <= boundary.yMin) {
+				this.reset();
+				gameController.updateScore(+10);
+			}
 		}
 	}
 
